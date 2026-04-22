@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const connect = mongoose.connect("mongodb://localhost:27017/Login-tut");
+const connect = mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/Login-tut");
 
 // Check database connected or not
 connect.then(() => {
